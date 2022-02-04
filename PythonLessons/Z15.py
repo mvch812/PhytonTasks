@@ -8,7 +8,9 @@ b = int(input())
 
 def Nab(b):
     res = [1]
-
+    for i in range(2, b+1):
+        res.append(i*res[i-2])
+    return res
 
 
 print(Nab(b))
